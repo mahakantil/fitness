@@ -18,7 +18,6 @@ const TrialModal = ({ isOpen, onClose }) => {
       <div className="modal-content" data-aos="zoom-in">
         <button className="close-btn" onClick={resetAndClose}>&times;</button>
 
-        {/* STEP 1: Plan Selection */}
         {step === 1 && (
           <div className="modal-step">
             <h2>Select Your <span className="highlight">Trial Plan</span></h2>
@@ -33,7 +32,6 @@ const TrialModal = ({ isOpen, onClose }) => {
           </div>
         )}
 
-        {/* STEP 2: Registration Form */}
         {step === 2 && (
           <form className="modal-step" onSubmit={(e) => { e.preventDefault(); setStep(3); }}>
             <h2>User <span className="highlight">Details</span></h2>
@@ -48,7 +46,6 @@ const TrialModal = ({ isOpen, onClose }) => {
           </form>
         )}
 
-        {/* STEP 3: Success & Timings */}
         {step === 3 && (
           <div className="modal-step text-center">
             <h2 className="highlight">Welcome to the Club!</h2>

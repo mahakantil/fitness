@@ -1,29 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 const Nutrition = () => {
   const meals = [
-    { title: 'Breakfast', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=500', cals: '450' },
-    { title: 'Lunch', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500', cals: '650' },
-    { title: 'Dinner', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=500', cals: '550' }
+    { id: 'breakfast', name: 'Breakfast', calories: '450', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80' },
+    { id: 'lunch', name: 'Lunch', calories: '650', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80' },
+    { id: 'dinner', name: 'Dinner', calories: '550', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80' }
   ];
 
   return (
-    <section className="page-section">
-      <div className="container">
-        <h2 className="section__title">Nutrition <span className="highlight">Tracker</span></h2>
-        <div className="grid-3">
-          {meals.map((meal, idx) => (
-            <div key={idx} className="meal-card" data-aos="zoom-in" data-aos-delay={idx * 100}>
-              <img src={meal.img} alt={meal.title} className="meal-img" />
-              <div className="meal-info">
-                <h4>{meal.title}</h4>
-                <p className="highlight">{meal.cals} Calories</p>
+    <div className="nutrition-container page-section">
+      <h2 className="section__title">Nutrition <span className="highlight">Tracker</span></h2>
+      <div className="meal__grid">
+        {meals.map((meal) => ( 
+          <Link to={`/nutrition/${meal.id}`} key={meal.id} className="meal__card-link">
+            <div className="meal__card" data-aos="zoom-in">
+              <img src={meal.img} alt={meal.name} />
+              <div className="meal__info">
+                <h4>{meal.name}</h4>
+                <p className="highlight">{meal.calories} Calories</p>
               </div>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -11,6 +11,9 @@ import TrialModal from './TrialModal';
 import Dashboard from './Dashboard';
 import Nutrition from './Nutrition';
 import BmiCalculator from './BmiCalculator';
+import MealDetail from './MealDetail';
+import Gallery from './Gallery';
+import Footer from './Footer'; 
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,22 +27,23 @@ function App() {
       <div className="app-container">
         <Header />
         
-        {/* The Modal is placed here so it can appear over any page */}
         <TrialModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         <Routes>
           <Route path="/" element={
             <>
               <Hero onStartTrial={() => setIsModalOpen(true)} />
-              <Pricing />
+              <Pricing onGetStarted={() => setIsModalOpen(true)} />
+              <Gallery /> 
             </>
           } />
+          
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/nutrition" element={<Nutrition />} />
           <Route path="/bmi" element={<BmiCalculator />} />
+          <Route path="/nutrition/:mealId" element={<MealDetail />} />
         </Routes>
-        
-        <footer className="footer">©️ 2026 ELITEFIT. Powering Your Progress.</footer>
+        <Footer /> 
       </div>
     </Router>
   );
