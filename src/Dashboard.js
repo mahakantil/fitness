@@ -57,7 +57,7 @@ const Dashboard = () => {
           </div>
           
           <div className="health-tips-module stat-card">
-            <h3>Elite <span className="highlight">Health Tips</span></h3>
+            <h3>Power <span className="highlight">Health Tips</span></h3>
             <ul className="tips-list">
               <li><i className="ri-check-line"></i> Workout ke baad 20g protein zaroor lein.</li>
               <li><i className="ri-check-line"></i> Raat ko kam se kam 7-8 ghante ki neend lein.</li>

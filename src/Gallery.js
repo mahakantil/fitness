@@ -20,7 +20,7 @@ const Gallery = () => {
   return (
     <section className="gallery-container">
       <h2 className="section__title center" data-aos="fade-up">
-        ELITE <span className="highlight">FACILITIES</span>
+        POWER <span className="highlight">FACILITIES</span>
       </h2>
       <div className="gallery__grid">
         {facilityImages.map((img, index) => (

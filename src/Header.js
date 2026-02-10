@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        ELITE<span>FIT</span>
+        POWER<span>FIT</span>
       </div>
 
       <ul className="nav__list">

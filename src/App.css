@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
 :root {
-  --primary-neon: #ccff00;
+  --primary-neon:  #ccff00;
   --bg-dark: #080808;
   --card-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -552,6 +552,7 @@ body {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 40px;
+  margin-top: 80px;
 }
 
 .meal__grid {
