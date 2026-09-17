@@ -517,7 +517,8 @@ body {
   height: 250px;
   overflow: hidden;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+   
 }
 
 .gallery__item img {

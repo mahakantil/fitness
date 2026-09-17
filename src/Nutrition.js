@@ -10,7 +10,7 @@ const Nutrition = () => {
 
   return (
     <div className="nutrition-container page-section">
-      <h2 className="section__title">Nutrition <span className="highlight">Tracker</span></h2>
+      <h2 className="section__title">NUTRITION <span className="highlight">TRACKER</span></h2>
       <div className="meal__grid">
         {meals.map((meal) => ( 
           <Link to={`/nutrition/${meal.id}`} key={meal.id} className="meal__card-link">
